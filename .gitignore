@@ -1,2 +1,2 @@
-report/log/*
-report/testreport/*
+report/log/*.log
+report/testreport/*.html
