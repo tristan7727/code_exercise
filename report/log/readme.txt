@@ -1,1 +1,1 @@
-!.gitkeep
+#Log file folder
