@@ -16,7 +16,7 @@ def run():
     test_dir = os.path.join(ROOT_DIR, 'testcase') 
     suite = unittest.defaultTestLoader.discover(start_dir=test_dir,pattern='TC*.py')
     now = time.strftime('%Y-%m-%d_%H_%M_%S')
-    reportname =  ROOT_DIR + '//' + 'Report/' + 'TestResult-' + now + '.html'
+    reportname =  ROOT_DIR + '//' + 'report/testreport/' + 'TestResult-' + now + '.html'
     with open(reportname,'wb') as f:
         runner = HTMLTestRunner.HTMLTestRunner(
             stream=f,
