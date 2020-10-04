@@ -17,8 +17,8 @@ python ./run.py
 ```
 
 ## Notes
-1. By default a test user account has been used for testing to log into the test system;   However, you can use your own account to execute the test simply via replacing the user credential from ./data/testdata/data_info.xlsx  ( make sure username in cell B1 and password in cell B2 );
-2. "Send Email" module has been commented out owing to security concern. To enable this function please: 
+1. By default a test user account has been used for testing to log into the test system;   The current test user account will be deleted within 7 days owing to security concern.    However, you can use your own account to execute the test simply via replacing the user credential from ./data/testdata/data_info.xlsx  ( make sure username in cell B1 and password in cell B2 ); 
+2. "Send Email" module has been commented out. To enable this function please: 
 ```
     1. set receiver from "./public/common/sendemail.py"
        recvaddress = ['receiver@xxx.xx']
