@@ -1,0 +1,17 @@
+2020-10-04 13:20:29,400 - root - INFO - ############################### START ###############################
+2020-10-04 13:20:32,957 - root - INFO - SUCCESS    Start a new browser: chrome, Spend 3.5549888610839844 seconds
+2020-10-04 13:20:44,987 - root - INFO - SUCCESS    Navigated to https://login.xero.com/, Spend 12.028902053833008 seconds
+2020-10-04 13:20:45,672 - root - INFO - SUCCESS    Get current window title as Login | Xero Accounting Software, Spend 0.6834850311279297 seconds
+2020-10-04 13:20:45,932 - root - INFO - SUCCESS    Clear and type element: <xpath->//*[@id="email"]> content: testsxero07@gmail.com, Spend 0.2595670223236084 seconds
+2020-10-04 13:20:46,059 - root - INFO - SUCCESS    Clear and type element: <xpath->//*[@id="password"]> content: Prove2020!!, Spend 0.12527942657470703 seconds
+2020-10-04 13:20:58,453 - root - INFO - SUCCESS    Clicked element: <xpath->//*[@id="submitButton"]>, Spend 12.39169716835022 seconds
+2020-10-04 13:21:07,966 - root - INFO - SUCCESS    Navigated to https://go.xero.com/OrganisationLogin/?shortCode=!6SZ5W, Spend 2.181107997894287 seconds
+2020-10-04 13:21:07,970 - root - INFO - SUCCESS    Get current window title as Xero | Dashboard | test001, Spend 0.003776073455810547 seconds
+2020-10-04 13:21:13,366 - root - INFO - SUCCESS    Navigated to https://go.xero.com/Bank/BankAccounts.aspx, Spend 3.394515037536621 seconds
+2020-10-04 13:21:15,377 - root - INFO - SUCCESS    Get current window title as Xero | Bank accounts | test001, Spend 0.006608724594116211 seconds
+2020-10-04 13:21:22,335 - root - INFO - SUCCESS    Clicked element: <xpath->//span[text()='Add Bank Account']>, Spend 6.957622051239014 seconds
+2020-10-04 13:21:23,428 - root - INFO - SUCCESS    Element: <xpath->//li[text()='ANZ (NZ)']> is exist, Spend 1.0917470455169678 seconds
+2020-10-04 13:21:28,544 - root - INFO - SUCCESS    Clicked element: <xpath->//li[text()='ANZ (NZ)']>, Spend 5.11499810218811 seconds
+2020-10-04 13:21:40,680 - root - INFO - FAIL    Unable to clear and type element: <css->input[name^='accountname']> content: TestFromTristan20201004132128, Spend 10.12368392944336 seconds
+2020-10-04 13:21:40,815 - root - INFO - SUCCESS    Closed all window and quit the driver, Spend 0.13353919982910156 seconds
+2020-10-04 13:21:40,816 - root - INFO - ###############################  End  ###############################
