@@ -752,8 +752,29 @@ class PySelenium(object):
                 self.driver.find_element(element).send_keys(Keys.UP)
             move_time -= 1
 
-
     def get_Org_URL(self):
+        """
+        To use the current timestamp as a random string for Bank Account name
+        
+        Usage:
+        get_currentTime(self)
+        """
+        org_urls = []
+        time.sleep(2)
+        script = self.driver.find_element_by_id("header-data")
+        scriptText = script.get_attribute('innerText')
+        org_menu = json.loads(scriptText)
+        orgs = org_menu['menuItems'][0]['children']
+
+        for org in orgs:
+            if (org['label'] != 'Add a new organisation'):
+                org_urls.append(org['url']),org
+        
+        org_url = random.choice(org_urls)
+        return org_url
+
+
+    def get_Org_URL_beautifulsoap(self):
         """
         To use the current timestamp as a random string for Bank Account name
         

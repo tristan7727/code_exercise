@@ -7,7 +7,12 @@ from public.common.readconfig import ReadConfig
 config_file_path = os.path.split(os.path.realpath(__file__))[0]
 read_config = ReadConfig(os.path.join(config_file_path,'config.ini'))
 # Set project parameter
-prj_path = read_config.getValue('projectConfig','project_path')
+#prj_path = read_config.getValue('projectConfig','project_path')
+# Set project parameter
+#prj_path = '/' + os.path.dirname(os.path.abspath(__file__)).strip('/config')
+prj_path = '/' + os.path.dirname(os.path.abspath(__file__))[:-7]
+
+
 # Path of log
 log_path = os.path.join(prj_path, 'report', 'log')
 # Path of screenshot
