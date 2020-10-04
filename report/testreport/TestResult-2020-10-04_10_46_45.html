@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Coding Exercise - Xero</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>Coding Exercise - Xero</h1>
+<p class='attribute'><strong>Start Time:</strong> 2020-10-04 10:46:45</p>
+<p class='attribute'><strong>Duration:</strong> 0:01:13.574291</p>
+<p class='attribute'><strong>Status:</strong> Pass 1</p>
+
+<p class='description'>Coding Exercise to add ANZ (NZ) Bank Account for any Organsiation</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='passClass'>
+    <td>TC000_AddCompanyForAnyOrganisation.SanityTest_Xero: UAT</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_bank_account_info: Login page</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: 2020-10-04 10:46:45,882 - root - INFO - ############################### START ###############################
+2020-10-04 10:46:47,726 - root - INFO - SUCCESS    Start a new browser: chrome, Spend 1.8427891731262207 seconds
+2020-10-04 10:46:53,441 - root - INFO - SUCCESS    Navigated to https://login.xero.com/, Spend 5.714231014251709 seconds
+2020-10-04 10:46:53,450 - root - INFO - SUCCESS    Get current window title as Login | Xero Accounting Software, Spend 0.0064470767974853516 seconds
+2020-10-04 10:46:53,600 - root - INFO - SUCCESS    Clear and type element: &lt;xpath-&gt;//*[@id="email"]&gt; content: tristan.riu@gmail.com, Spend 0.14882802963256836 seconds
+2020-10-04 10:46:53,683 - root - INFO - SUCCESS    Clear and type element: &lt;xpath-&gt;//*[@id="password"]&gt; content: Prove2020!, Spend 0.08245110511779785 seconds
+2020-10-04 10:47:03,131 - root - INFO - SUCCESS    Clicked element: &lt;xpath-&gt;//*[@id="submitButton"]&gt;, Spend 9.447429180145264 seconds
+2020-10-04 10:47:17,451 - root - INFO - SUCCESS    Navigated to https://go.xero.com/OrganisationLogin/?shortCode=!zBvX6, Spend 9.252495765686035 seconds
+2020-10-04 10:47:17,457 - root - INFO - SUCCESS    Get current window title as Xero | Dashboard | test_new, Spend 0.004761934280395508 seconds
+2020-10-04 10:47:20,559 - root - INFO - SUCCESS    Navigated to https://go.xero.com/Bank/BankAccounts.aspx, Spend 3.1014537811279297 seconds
+2020-10-04 10:47:20,565 - root - INFO - SUCCESS    Get current window title as Xero | Bank accounts | test_new, Spend 0.005021810531616211 seconds
+2020-10-04 10:47:22,312 - root - INFO - SUCCESS    Clicked element: &lt;xpath-&gt;//span[text()='Add Bank Account']&gt;, Spend 1.7459862232208252 seconds
+2020-10-04 10:47:23,441 - root - INFO - SUCCESS    Element: &lt;xpath-&gt;//li[text()='ANZ (NZ)']&gt; is exist, Spend 1.1284689903259277 seconds
+2020-10-04 10:47:23,663 - root - INFO - SUCCESS    Clicked element: &lt;xpath-&gt;//li[text()='ANZ (NZ)']&gt;, Spend 0.21872711181640625 seconds
+2020-10-04 10:47:25,913 - root - INFO - SUCCESS    Clear and type element: &lt;css-&gt;input[name^='accountname']&gt; content: TestFromTristan20201004104723, Spend 0.23800921440124512 seconds
+2020-10-04 10:47:28,007 - root - INFO - SUCCESS    Clicked element: &lt;css-&gt;input[name^='accounttype']&gt;, Spend 0.09041810035705566 seconds
+2020-10-04 10:47:30,113 - root - INFO - SUCCESS    Clicked element: &lt;xpath-&gt;//li[text()='Credit Card']&gt;, Spend 0.0994868278503418 seconds
+2020-10-04 10:47:34,249 - root - INFO - SUCCESS    Clicked element: &lt;xpath-&gt;//input[starts-with(@name,'accountnumber') and @placeholder = '1234']&gt;, Spend 0.12959790229797363 seconds
+2020-10-04 10:47:34,313 - root - INFO - SUCCESS    Clear and type element: &lt;xpath-&gt;//input[starts-with(@name,'accountnumber') and @placeholder = '1234']&gt; content: 8888, Spend 0.0636739730834961 seconds
+2020-10-04 10:47:36,424 - root - INFO - SUCCESS    Clicked element: &lt;xpath-&gt;//span[text()='Continue']&gt;, Spend 0.10498785972595215 seconds
+2020-10-04 10:47:40,488 - root - INFO - SUCCESS    Navigated to https://go.xero.com/Bank/BankAccounts.aspx, Spend 4.063226938247681 seconds
+2020-10-04 10:47:42,603 - root - INFO - SUCCESS    Navigated to https://go.xero.com/GeneralLedger/ChartOfAccounts.aspx, Spend 2.1045351028442383 seconds
+2020-10-04 10:47:43,217 - root - INFO - SUCCESS    Clear and type element: &lt;xpath-&gt;//*[@name='SearchTermsText']&gt; content: TestFromTristan20201004104723, Spend 0.6123929023742676 seconds
+2020-10-04 10:47:44,578 - root - INFO - SUCCESS    Clicked element: &lt;xpath-&gt;//span[text()='Search']/..&gt;, Spend 1.3601069450378418 seconds
+2020-10-04 10:47:44,640 - root - INFO - SUCCESS    Clicked element: &lt;xpath-&gt;//input[@type='checkbox' and @title='Select all accounts']&gt;, Spend 0.061003923416137695 seconds
+2020-10-04 10:47:44,806 - root - INFO - SUCCESS    Clicked element: &lt;xpath-&gt;//a[text()='Delete']&gt;, Spend 0.16515898704528809 seconds
+2020-10-04 10:47:47,381 - root - INFO - SUCCESS    Clicked element: &lt;xpath-&gt;//a[@id='popupOK']&gt;, Spend 2.5737264156341553 seconds
+2020-10-04 10:47:47,854 - root - INFO - SUCCESS    Clear and type element: &lt;xpath-&gt;//*[@name='SearchTermsText']&gt; content: TestFromTristan20201004104723, Spend 0.47246217727661133 seconds
+2020-10-04 10:47:49,151 - root - INFO - SUCCESS    Clicked element: &lt;xpath-&gt;//span[text()='Search']/..&gt;, Spend 1.2969872951507568 seconds
+2020-10-04 10:47:59,276 - root - INFO - SUCCESS    Element: &lt;xpath-&gt;//table[@id='chartOfAccounts']/tbody/tr&gt; is not exist, Spend 10.123750925064087 seconds
+2020-10-04 10:47:59,452 - root - INFO - SUCCESS    Closed all window and quit the driver, Spend 0.17312884330749512 seconds
+2020-10-04 10:47:59,453 - root - INFO - ###############################  End  ###############################
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>
